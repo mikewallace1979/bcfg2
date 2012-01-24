@@ -237,8 +237,8 @@ class CfgEntrySet(Bcfg2.Server.Plugin.EntrySet):
                 raise Bcfg2.Server.Plugin.PluginExecutionError
             open(name, 'w').write(etext)
             if log:
-                print("Wrote file %s" % name)
-        badattr = [attr for attr in ['owner', 'group', 'perms']
+                logger.info("Wrote file %s" % name)
+        badattr = [attr for attr in ['owner', 'group', 'perms', 'secontext']
                    if attr in new_entry]
         if badattr:
             # check for info files and inform user of their removal

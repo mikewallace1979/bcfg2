@@ -244,18 +244,21 @@ MDATA_OWNER = Option('Default Path owner',
 MDATA_GROUP = Option('Default Path group',
                      default='root', cf=('mdata', 'group'),
                      odesc='group permissions')
-MDATA_IMPORTANT = Option('Default Path priority (importance)',
-                     default='False', cf=('mdata', 'important'),
-                     odesc='Important entries are installed first')
 MDATA_PERMS = Option('Default Path permissions',
                      '644', cf=('mdata', 'perms'),
                      odesc='octal permissions')
+MDATA_SECONTEXT = Option('Default Path SELinux context',
+                         'default', cf=('mdata', 'secontext'),
+                         odesc='SELinux context')
+MDATA_IMPORTANT = Option('Default Path priority (importance)',
+                         default='False', cf=('mdata', 'important'),
+                         odesc='Important entries are installed first')
 MDATA_PARANOID = Option('Default Path paranoid setting',
-                     'false', cf=('mdata', 'paranoid'),
-                     odesc='Path paranoid setting')
+                        'false', cf=('mdata', 'paranoid'),
+                        odesc='Path paranoid setting')
 MDATA_SENSITIVE = Option('Default Path sensitive setting',
-                     'false', cf=('mdata', 'sensitive'),
-                     odesc='Path sensitive setting')
+                         'false', cf=('mdata', 'sensitive'),
+                         odesc='Path sensitive setting')
 
 # Server options
 SERVER_REPOSITORY = Option('Server repository path', '/var/lib/bcfg2',
