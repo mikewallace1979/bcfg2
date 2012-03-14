@@ -7,6 +7,7 @@ import socket
 import random
 import logging
 import threading
+import re
 import lxml.etree
 from UserDict import DictMixin
 from subprocess import Popen, PIPE, STDOUT
